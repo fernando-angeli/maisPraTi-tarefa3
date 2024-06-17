@@ -1,0 +1,9 @@
+:root {
+  --color-cabecalho-e-rodape: #2c3e50; /* Azul Escuro */
+  --color-fundo-principal: #ecf0f1; /* Cinza Claro */
+  --color-texto-principal: #000; /* Preto */
+  --color-botoes-e-links: #e67e22; /* Laranja */
+  --color-msg-sucesso: #27ae60; /* Verde */
+  --color-texto-secundario: #95a5a6; /* Cinza Médio */
+  --color-destaques: #3498db; /* Azul Claro */
+}
