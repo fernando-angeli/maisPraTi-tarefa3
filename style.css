@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 :root {
-  --color-cabecalho-e-rodape: #2c3e50; /* Azul Escuro */
+  --color-cabecalho-e-rodape: #222831; /* Azul Escuro */
   --color-fundo-principal: #ecf0f1; /* Cinza Claro */
   --color-texto-principal: #000; /* Preto */
   --color-botoes-e-links: #e67e22; /* Laranja */
@@ -10,10 +10,14 @@
   --color-azul-claro: #20b2ff; /* Azul Claro */
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0px;
   padding: 0px;
-  font-family: Roboto;
+  font-family: "Roboto", sans-serif;
 }
 
 #container {
@@ -25,18 +29,42 @@
 
 header {
   background: var(--color-cabecalho-e-rodape);
-  height: 60px;
-  padding: 15px 0;
+  min-height: 70px;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.box{
+  float: left;
+  text-align: center;
+  justify-content: center;
+  min-height: 70px;
+}
+
+.logo{
+  width: 20%;
+}
+
+.navbar{
+  margin: 0 auto;
+  width: 60%;
+}
+
+.contato{
+  width: 20%;
+  vertical-align: middle;
 }
 
 #logo {
-  float: left;
-  padding-left: 80px;
+  padding: 10px;
 }
 
 #navbar {
-  float: right;
-  padding-right: 80px;
+display: inline-block;
+}
+
+nav {
+  display: inline-block;
 }
 
 nav ul {
@@ -48,15 +76,18 @@ nav ul {
 nav ul li {
   float: left;
   margin-left: 25px;
+  text-decoration: none;
 }
 
 nav ul li a:link {
   display: block;
-  color: var(--color-azul-claro);
+  color: #fff;
   text-decoration: none;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 1.1em;
+  font-size: 1rem;
+}
+
+nav ul li a:visited {
+  color: #fff;
 }
 
 nav ul li a:hover {
@@ -65,9 +96,29 @@ nav ul li a:hover {
   border-bottom: 1px solid var(--color-verde);
 }
 
+.btn-contato{
+  align-items: center;
+  justify-content: center;
+  height: 2rem;
+}
+
 /* Section Home*/
 #home {
   background: url(./img/background.jpg);
   background-size: cover;
   height: calc(100vh - 90px);
+}
+
+.title-home{
+  color: var(--color-cabecalho-e-rodape);
+  padding: 5rem 10rem 0 10rem;
+  font-size: 3rem;
+  text-shadow: 2px 2px 2px var(--color-azul-claro);
+  background: transparent 1.5;
+}
+
+.text-home{
+  color: var(--color-azul-claro);
+  padding: 5rem 10rem;
+  font-size: 2rem;
 }
