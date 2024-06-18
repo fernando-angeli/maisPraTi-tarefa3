@@ -1,9 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
 :root {
   --color-cabecalho-e-rodape: #2c3e50; /* Azul Escuro */
   --color-fundo-principal: #ecf0f1; /* Cinza Claro */
   --color-texto-principal: #000; /* Preto */
   --color-botoes-e-links: #e67e22; /* Laranja */
-  --color-msg-sucesso: #27ae60; /* Verde */
+  --color-verde: #0af898; /* Verde */
   --color-texto-secundario: #95a5a6; /* Cinza Médio */
-  --color-destaques: #3498db; /* Azul Claro */
+  --color-azul-claro: #20b2ff; /* Azul Claro */
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: Roboto;
+}
+
+#container {
+  width: 100vw;
+  margin: 0 auto;
+}
+
+/* Header (Logo e Menu) */
+
+header {
+  background: var(--color-cabecalho-e-rodape);
+  height: 60px;
+  padding: 15px 0;
+}
+
+#logo {
+  float: left;
+  padding-left: 80px;
+}
+
+#navbar {
+  float: right;
+  padding-right: 80px;
+}
+
+nav ul {
+  list-style: none;
+  float: right;
+  margin: 20px;
+}
+
+nav ul li {
+  float: left;
+  margin-left: 25px;
+}
+
+nav ul li a:link {
+  display: block;
+  color: var(--color-azul-claro);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+nav ul li a:hover {
+  color: linear-gradient(to right, #0af898, #20b2ff);
+  transition: left 1s ease;
+  border-bottom: 1px solid var(--color-verde);
+}
+
+/* Section Home*/
+#home {
+  background: url(./img/background.jpg);
+  background-size: cover;
+  height: calc(100vh - 90px);
 }
