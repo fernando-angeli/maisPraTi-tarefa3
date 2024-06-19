@@ -164,6 +164,19 @@ nav ul li a:hover {
   height: 100vh;
 }
 
+.carousel{
+  display: inline-block;
+}
+
+.carousel-inner{
+  display: block;
+  float: left;
+}
+
+.carousel-item{
+  display: inline-block;
+}
+
 /* Section Contato */
 #contato {
   position: relative;
