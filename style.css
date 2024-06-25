@@ -21,10 +21,9 @@ html {
   scroll-behavior: smooth;
 }
 
-body{
+body {
   width: 100vw;
 }
-
 
 #container {
   position: absolute;
@@ -115,7 +114,7 @@ nav ul li a:hover {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.title-sections{
+.title-sections {
   color: var(--color-azul-claro);
   position: relative;
   top: 100px;
@@ -138,11 +137,11 @@ nav ul li a:hover {
 /* Section Sobre */
 #sobre {
   position: relative;
-  background: url(./img/background.jpg) no-repeat;
+  /* background: url(./img/background.jpg) no-repeat; */
   background-size: cover;
   height: 100vh;
 }
-.content-sobre{
+.content-sobre {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -164,17 +163,58 @@ nav ul li a:hover {
   height: 100vh;
 }
 
-.carousel{
-  display: inline-block;
+.carousel {
+  position: absolute;
+  overflow: hidden;
+  width: 80%;
+  height: 300px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.carousel-inner{
-  display: block;
+.carousel-inner {
+  transition: transform 0.5s ease;
+}
+
+.carousel-item {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.carousel-item > h3 {
+  font-size: 3rem;
+}
+
+.carousel-item > p {
+  font-size: 2rem;
+}
+
+.carousel-item.active {
+  opacity: 1;
+  text-align: center;
+  padding: 105px 0px;
+  width: 100%;
+}
+
+.carousel-button {
+  position: relative;
+  border: none;
+  margin: 80px 0px;
+  cursor: pointer;
+  font-size: 100px;
+  z-index: 10;
+  background: transparent;
+  color: #20b2ff;
+}
+
+.prev-button {
   float: left;
 }
 
-.carousel-item{
-  display: inline-block;
+.next-button {
+  float: right;
 }
 
 /* Section Contato */

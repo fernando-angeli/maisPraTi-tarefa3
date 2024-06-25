@@ -41,7 +41,6 @@
           <h2 class="title-sections">Vantagens</h2>
           <div class="carousel">
             <div class="carousel-inner">
-              <button class="prev" onClick="moveSlide(-1)">&#10094;</button>
               <article class="carousel-item">
                 <h3>Elaboração de Orçamentos</h3>
                 <p>Automação de cálculos e modelos personalizáveis.</p>
@@ -67,7 +66,8 @@
                 <p>Portal do cliente e integração com equipes de instalação.</p>
               </article>
             </div>
-            <button class="next" onClick="moveSlide(1)">&#10095;</button>
+            <button class="carousel-button prev-button" onClick="showPrevItem()">&#10094;</button>
+            <button class="carousel-button next-button" onClick="showNextItem()">&#10095;</button>
           </div>
         </section>
         <section id="contato">
@@ -78,5 +78,6 @@
         </section>
       </main>
     </div>
+    <script src="app.js"></script>
   </body>
 </html>
