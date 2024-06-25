@@ -1,9 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Roboto", sans-serif;
+}
+
 :root {
-  --color-cabecalho-e-rodape: #2c3e50; /* Azul Escuro */
+  --color-cabecalho-e-rodape: #222831; /* Azul Escuro */
   --color-fundo-principal: #ecf0f1; /* Cinza Claro */
   --color-texto-principal: #000; /* Preto */
   --color-botoes-e-links: #e67e22; /* Laranja */
-  --color-msg-sucesso: #27ae60; /* Verde */
+  --color-verde: #0af898; /* Verde */
   --color-texto-secundario: #95a5a6; /* Cinza Médio */
-  --color-destaques: #3498db; /* Azul Claro */
+  --color-azul-claro: #20b2ff; /* Azul Claro */
+  --color-gradient: linear-gradient(135deg, #0af898, #20b2ff);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100vw;
+}
+
+#container {
+  position: absolute;
+  width: 100vw;
+  margin: 0 auto;
+}
+
+/* Header (Logo e Menu) */
+
+header {
+  position: fixed;
+  background: var(--color-cabecalho-e-rodape);
+  min-height: 70px;
+  width: 100vw;
+  font-size: 1.5rem;
+  z-index: 2;
+}
+
+.box {
+  float: left;
+  text-align: center;
+  min-height: 70px;
+}
+
+.logo {
+  width: 25%;
+}
+.box.logo img {
+  margin-left: 15px;
+}
+
+.navbar {
+  width: 50%;
+}
+nav ul {
+  list-style: none;
+  margin: 20px;
+}
+nav ul li {
+  display: inline-block;
+  margin-left: 25px;
+  text-decoration: none;
+}
+nav ul li a:link {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+nav ul li a:visited {
+  color: #fff;
+}
+nav ul li a:hover {
+  transition: left 1s ease;
+  border-bottom: 1px solid var(--color-verde);
+}
+
+.box.contato {
+  position: relative;
+  width: 25%;
+}
+.link-contato {
+  margin-right: 15px;
+  text-decoration: none;
+  width: 150px;
+  border: 2px solid;
+  border-image: linear-gradient(
+      135deg,
+      var(--color-verde),
+      var(--color-azul-claro)
+    )
+    1;
+  background: transparent;
+  height: auto;
+  color: #fff;
+  font-size: 1rem;
+  padding: 10px 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Global Sections */
+.content-sections {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.title-sections {
+  color: var(--color-azul-claro);
+  position: relative;
+  top: 100px;
+  left: 50px;
+}
+
+/* Section Home */
+#home {
+  position: relative;
+  height: 100vh;
+}
+.title-home {
+  color: var(--color-cabecalho-e-rodape);
+  font-size: 3rem;
+  text-shadow: 2px 2px 2px var(--color-azul-claro);
+  background: transparent 1.5;
+  text-align: center;
+}
+
+/* Section Sobre */
+#sobre {
+  position: relative;
+  /* background: url(./img/background.jpg) no-repeat; */
+  background-size: cover;
+  height: 100vh;
+}
+.content-sobre {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.text-sobre {
+  background-color: #fff;
+  border-radius: 50px 100px;
+  text-align: justify;
+  color: var(--color-cabecalho-e-rodape);
+  font-size: 2rem;
+  margin-top: 40px;
+  padding: 60px;
+}
+
+/* Section Sobre */
+#vantagens {
+  position: relative;
+  height: 100vh;
+}
+
+.carousel {
+  position: absolute;
+  overflow: hidden;
+  width: 80%;
+  height: 300px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.carousel-inner {
+  transition: transform 0.5s ease;
+}
+
+.carousel-item {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.carousel-item > h3 {
+  font-size: 3rem;
+}
+
+.carousel-item > p {
+  font-size: 2rem;
+}
+
+.carousel-item.active {
+  opacity: 1;
+  text-align: center;
+  padding: 105px 0px;
+  width: 100%;
+}
+
+.carousel-button {
+  position: relative;
+  border: none;
+  margin: 80px 0px;
+  cursor: pointer;
+  font-size: 100px;
+  z-index: 10;
+  background: transparent;
+  color: #20b2ff;
+}
+
+.prev-button {
+  float: left;
+}
+
+.next-button {
+  float: right;
+}
+
+/* Section Contato */
+#contato {
+  position: relative;
+  height: 100vh;
 }
