@@ -7,7 +7,7 @@
 }
 
 :root {
-  --color-cabecalho-e-rodape: #222831; /* Azul Escuro */
+  --color-cabecalho-e-rodape: rgb(34, 40, 49); /* Azul Escuro */
   --color-fundo-principal: #ecf0f1; /* Cinza Claro */
   --color-texto-principal: #000; /* Preto */
   --color-verde: rgb(10, 248, 152); /* Verde */
@@ -132,12 +132,12 @@ nav ul li a:hover {
 #home {
   position: relative;
   height: 100vh;
+  background-color: rgb(34, 40, 49, 0.2);
 }
 .title-home {
   color: var(--color-cabecalho-e-rodape);
-  font-size: 3rem;
-  text-shadow: 2px 2px 2px var(--color-azul-claro);
-  background: transparent 1.5;
+  font-size: 5rem;
+  text-shadow: 3px 3px 6px var(--color-azul-claro);
   text-align: center;
 }
 
@@ -149,18 +149,21 @@ nav ul li a:hover {
   height: 100vh;
 }
 .content-sobre {
-  position: absolute;
+  display: inline-block;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 .text-sobre {
+  margin-top: 80px;
+  display: block;
   background-color: #fff;
-  border-radius: 50px 100px;
-  text-align: justify;
-  font-size: 2rem;
-  margin-top: 40px;
-  padding: 60px;
+  border-radius: 80px 150px;
+  border: 10px solid var(--color-verde);
+  text-align: center;
+  font-size: 1.8rem;
+  padding: 80px 80px;
+  background-color: rgb(256, 256, 256, 0.8);
 }
 
 /* Section Sobre */
