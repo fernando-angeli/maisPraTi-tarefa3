@@ -108,6 +108,12 @@ nav ul li a:hover {
   transform: translate(-50%, -50%);
 }
 
+.link-contato:hover {
+  background: linear-gradient(135deg, #0af898, #20b2ff);
+  border: 2px solid var(--color-cabecalho-e-rodape);
+  transition: 400ms linear;
+}
+
 /* Global Sections */
 .content-sections {
   position: absolute;
@@ -284,9 +290,47 @@ nav ul li a:hover {
   cursor: pointer;
 }
 
+.btn-send-form:hover {
+  background: linear-gradient(135deg, #0af898, #20b2ff);
+  border: 2px solid var(--color-cabecalho-e-rodape);
+  transition: 400ms linear;
+}
+
 .error {
   color: red;
   border: none;
   background: transparent;
   font-weight: bold;
+}
+
+/* Footer */
+.content-footer {
+  position: absolute;
+  bottom: 0;
+  background-color: var(--color-cabecalho-e-rodape);
+  width: 100vw;
+  display: block;
+  padding: 20px 80px;
+}
+
+.info-footer {
+  display: inline-block;
+  width: 45vw;
+  color: #20b2ff;
+}
+
+.contacts {
+  display: inline-block;
+  width: 40vw;
+}
+
+.contact-footer {
+  display: block;
+  float: right;
+  padding-left: 30px;
+}
+
+.contacts > a {
+  text-decoration: none;
+  color: #0af898;
 }
