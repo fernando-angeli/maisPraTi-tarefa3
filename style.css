@@ -10,10 +10,9 @@
   --color-cabecalho-e-rodape: #222831; /* Azul Escuro */
   --color-fundo-principal: #ecf0f1; /* Cinza Claro */
   --color-texto-principal: #000; /* Preto */
-  --color-botoes-e-links: #e67e22; /* Laranja */
-  --color-verde: #0af898; /* Verde */
+  --color-verde: rgb(10, 248, 152); /* Verde */
   --color-texto-secundario: #95a5a6; /* Cinza Médio */
-  --color-azul-claro: #20b2ff; /* Azul Claro */
+  --color-azul-claro: rgb(32, 178, 255); /* Azul Claro */
   --color-gradient: linear-gradient(135deg, #0af898, #20b2ff);
 }
 
@@ -22,7 +21,8 @@ html {
 }
 
 body {
-  width: 100vw;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 #container {
@@ -35,8 +35,9 @@ body {
 
 header {
   position: fixed;
+  top: 0;
   background: var(--color-cabecalho-e-rodape);
-  min-height: 70px;
+  height: 70px;
   width: 100vw;
   font-size: 1.5rem;
   z-index: 2;
@@ -137,7 +138,7 @@ nav ul li a:hover {
 /* Section Sobre */
 #sobre {
   position: relative;
-  /* background: url(./img/background.jpg) no-repeat; */
+  background: url(./img/background.jpg);
   background-size: cover;
   height: 100vh;
 }
@@ -151,7 +152,6 @@ nav ul li a:hover {
   background-color: #fff;
   border-radius: 50px 100px;
   text-align: justify;
-  color: var(--color-cabecalho-e-rodape);
   font-size: 2rem;
   margin-top: 40px;
   padding: 60px;
@@ -221,4 +221,72 @@ nav ul li a:hover {
 #contato {
   position: relative;
   height: 100vh;
+  background-image: url(./img/background-contato.jpg);
+  background-size: cover;
+}
+
+#contato h2 {
+  color: #20b2ff;
+  padding: 30px 20px;
+}
+
+.contact-form {
+  position: relative;
+  background-color: rgb(256, 256, 256, 0.8);
+  height: calc(100vh - 80px);
+  padding: 80px 80px 0px 80px;
+  left: -400px;
+}
+
+.form-label {
+  display: block;
+  width: 250px;
+  float: left;
+  margin-bottom: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-cabecalho-e-rodape);
+}
+
+.form-input {
+  display: block;
+  width: calc(100% - 10px);
+  height: 40px;
+  font-size: 1rem;
+  padding-left: 10px;
+  margin-bottom: 10px;
+  border: 1px solid var(--color-cabecalho-e-rodape);
+  border-radius: 10px;
+}
+
+.form-input.text {
+  resize: none;
+  padding-top: 10px;
+  min-height: 100px;
+  max-height: 90vh;
+}
+
+.btn-send-form {
+  display: block;
+  width: 150px;
+  font-size: 1rem;
+  margin: 35px auto;
+  padding: 10px 0;
+  background-color: var(--color-cabecalho-e-rodape);
+  color: #fff;
+  border: 2px solid;
+  border-image: linear-gradient(
+      135deg,
+      var(--color-verde),
+      var(--color-azul-claro)
+    )
+    1;
+  cursor: pointer;
+}
+
+.error {
+  color: red;
+  border: none;
+  background: transparent;
+  font-weight: bold;
 }

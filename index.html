@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <title>WinTech</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="app.js"></script>
+    <script src="./scripts/app.js"></script>
+    <script src="./scripts/email.js"></script>
     <link rel="shortcut icon" href="./img/favIcon.png" type="image/x-icon" />
   </head>
   <body>
@@ -71,9 +72,22 @@
           </div>
         </section>
         <section id="contato">
-          <h2 class="title-sections">Contato</h2>
           <div class="content-sections">
-            <h2>Contato</h2>
+            <form id="emailForm" class="contact-form">
+                <h2>Fale conosco</h2>
+                <div class="form-inputs">
+                  <input type="text" id="errorName" class="error" readonly/>
+                  <label for="name" class="form-label">Nome</label>
+                  <input type="text" placeholder="Seu nome" class="form-input" id="name"/>
+                  <input type="text" id="errorEmail" class="error" readonly/>
+                  <label for="email" class="form-label">E-mail</label>
+                  <input type="text" placeholder="seumail@seumail.com" class="form-input" id="email"/>
+                  <input type="text" id="errorMessage" class="error" readonly/>
+                  <label for="message" class="form-label">Sua mensagem</label>
+                  <textarea class="form-input text" id="message" placeholder="Dúvidas ou sugestões"></textarea>
+                </div>
+                  <button class="btn-send-form" type="button" onclick="sendEmail()">Enviar</button>
+              </form>
           </div>
         </section>
       </main>
